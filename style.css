@@ -46,7 +46,7 @@ ul {
 }
 
 .landing p {
-  font-size: 2rem;
+  font-size: 1vw;
   padding-top: 100px;
 }
 
@@ -68,8 +68,20 @@ header {
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 2.5s steps(25, end) forwards,
+  animation: typing 1.5s steps(25, end) forwards,
     blink-caret 0.75s step-end infinite;
+}
+
+.typewriter p {
+  max-width: calc(calc(1vw - 0.2em) * 56);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 0.8s steps(25, end) forwards,
+    blink-caret 0.75s step-end infinite;
+  animation-delay: 1.4s;
+  animation-fill-mode: both;
 }
 
 /* The typing effect */
