@@ -1,80 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: 'Roboto Mono', monospace;
-    background-color: #F7CCAC;
-    color: #3A3845;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: #f7ccac;
+  color: #3a3845;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
 }
 
 .nav a {
-    text-decoration: none;
-    color: #3A3845;
+  text-decoration: none;
+  color: #3a3845;
+  font-size: 1.5rem;
 }
 
 .navbar {
-    height: 5vh;
+  height: 5vh;
 }
 
 .navbar .flex-container {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 20px;
 }
 
 .landing h1 {
-    font-size: 7rem;
+  font-size: 7vw;
 }
 
 .landing p {
-    font-size: 18px;
-    padding: 20px;
+  font-size: 2rem;
+  padding-top: 100px;
 }
 
 header {
-    height: 95vh;
+  height: 95vh;
 }
 
 .landing {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .typewriter h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
+  max-width: calc(calc(7vw - 0.2em) * 12);
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #826f66; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 2.5s steps(25, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  to {
+    width: 100%;
   }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
   }
+  50% {
+    border-color: #826f66;
+  }
+}
+
+.about-me {
+  height: 100vh;
+}
+
+.about-me h2 {
+  text-align: center;
+}
+
+.about-me-flex img {
+  max-height: 400px;
+  margin-right: 50px;
+}
+
+.about-me-flex {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.about-me-flex h2 {
+  font-size: 4rem;
+}
+
+.about-me-flex p {
+  font-size: 1.5rem;
+}
+
+.about-me-side-by-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.about-me-flex p {
+  max-width: 30%;
+}
+
+.projects {
+  height: 100vh;
+}
+
+.projects-flex {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.projects-1 {
+  display: flex;
+  gap: 50px;
+}
+
+.projects-2 {
+  display: flex;
+  gap: 50px;
+}
+
+.projects-1 img {
+  height: 350px;
+  border-radius: 10px;
+}
+
+.projects-2 img {
+  height: 350px;
+  border-radius: 10px;
+}
+
+.projects-flex h2 {
+  padding-bottom: 30px;
+  font-size: 4rem;
+}
+
+.contact {
+  height: 100vh;
+}
+
+.contact-flex {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.contact-flex h2 {
+  font-size: 4rem;
+}
+
+.contact-flex p {
+  font-size: 1.5rem;
+  max-width: 35%;
+  text-align: center;
+}
+
+.feedback-input {
+  color: #3a3845;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 40px;
+  background-color: transparent;
+  border: 2px solid #826f66;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+}
+asdadasdasdadasd .feedback-input:focus {
+  border: 2px solid #826f66;
+}
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+[type="submit"] {
+  font-family: "Roboto Mono", monospace;
+  width: 100%;
+  background: #826f66;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+[type="submit"]:hover {
+  background: #3a3845;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #3a3845; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px;
+  font-size: 25px; /* Increase font size */
+  font-family: "Roboto Mono", monospace;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
